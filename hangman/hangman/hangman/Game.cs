@@ -19,7 +19,7 @@ namespace hangman
         public KeyboardState keys, lastKey;
         public MouseState mouse, lastMouse;
         public GameWindow loadingScreen, menuWindow, ingameWindow;
-        public SpriteFont fontGputeks, fontDistInking;
+        public SpriteFont fontDistInking, characterFont, guessingWordFont;
 
         public Game()
         {
@@ -107,8 +107,9 @@ namespace hangman
         {
             // FONTS
             this.spriteBatch = new CoolFont(GraphicsDevice);
-            this.fontGputeks = Content.Load<SpriteFont>(@"Fonts\gputeks");
             this.fontDistInking = Content.Load<SpriteFont>(@"Fonts\menuFont");
+            this.characterFont = Content.Load<SpriteFont>(@"Fonts\characterFont");
+            this.guessingWordFont = Content.Load<SpriteFont>(@"Fonts\guessingWordFont");
         }
 
         protected override void UnloadContent()

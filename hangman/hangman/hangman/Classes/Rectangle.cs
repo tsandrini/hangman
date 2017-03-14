@@ -23,5 +23,11 @@ namespace hangman
             spriteBatch.Draw(_pointTexture, new Rectangle(rectangle.X + rectangle.Width, rectangle.Y, lineWidth, rectangle.Height + lineWidth), color);
             spriteBatch.Draw(_pointTexture, new Rectangle(rectangle.X, rectangle.Y + rectangle.Height, rectangle.Width + lineWidth, lineWidth), color);
         }
+
+        public static void DrawMuchCoolerRectangle(SpriteBatch spriteBatch, Rectangle rectangle, Color color, int lineWidth)
+        {
+            DrawRectangle(spriteBatch, rectangle, color, lineWidth);
+            DrawRectangle(spriteBatch, new Rectangle(rectangle.X + 2, rectangle.Y + 2, rectangle.Width, rectangle.Height), Color.Black, 1);
+        }
     }
 }

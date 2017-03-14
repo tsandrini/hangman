@@ -2,15 +2,6 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>Fonts\gputeks.spritefont</Source>
-      <Name>Fonts\gputeks</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\Fonts\gputeks.xnb</Output>
-      <Time>2017-03-12T16:21:17.0545504+01:00</Time>
-    </Item>
-    <Item>
       <Source>SFX\death.wav</Source>
       <Name>SFX\death</Name>
       <Importer>WavImporter</Importer>
@@ -35,15 +26,6 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\SFX\menu_select.xnb</Output>
-      <Time>2017-03-12T15:52:39.4836603+01:00</Time>
-    </Item>
-    <Item>
-      <Source>SFX\paddle_hit.wav</Source>
-      <Name>SFX\paddle_hit</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\SFX\paddle_hit.xnb</Output>
       <Time>2017-03-12T15:52:39.4836603+01:00</Time>
     </Item>
     <Item>
@@ -74,31 +56,40 @@
       <Time>2017-03-13T17:01:17.386183+01:00</Time>
     </Item>
     <Item>
-      <Source>Graphics\Backgrounds\town_bg.jpg</Source>
-      <Name>Graphics\Backgrounds\town_bg</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\Graphics\Backgrounds\town_bg.xnb</Output>
-      <Time>2017-03-13T15:37:29.3689017+01:00</Time>
-    </Item>
-    <Item>
-      <Source>Graphics\Backgrounds\panorama.jpg</Source>
-      <Name>Graphics\Backgrounds\panorama</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\Graphics\Backgrounds\panorama.xnb</Output>
-      <Time>2017-03-13T16:52:58.2751167+01:00</Time>
-    </Item>
-    <Item>
       <Source>Fonts\characterFont.spritefont</Source>
       <Name>Fonts\characterFont</Name>
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\Fonts\characterFont.xnb</Output>
-      <Time>2017-03-13T19:51:31.6291657+01:00</Time>
+      <Time>2017-03-14T15:41:40.2978626+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Graphics\Backgrounds\image_part_001.png</Source>
+      <Name>Graphics\Backgrounds\image_part_001</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\Graphics\Backgrounds\image_part_001.xnb</Output>
+      <Time>2017-03-14T09:28:18.8523315+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Graphics\Backgrounds\image_part_002.png</Source>
+      <Name>Graphics\Backgrounds\image_part_002</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\Graphics\Backgrounds\image_part_002.xnb</Output>
+      <Time>2017-03-14T09:28:18.8523315+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\guessingWordFont.spritefont</Source>
+      <Name>Fonts\guessingWordFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\Fonts\guessingWordFont.xnb</Output>
+      <Time>2017-03-14T20:00:01.2968206+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

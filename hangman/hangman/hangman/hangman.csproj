@@ -78,6 +78,7 @@
     <Compile Include="Classes\GameWindow.cs" />
     <Compile Include="Classes\MenuItem.cs" />
     <Compile Include="Classes\Rectangle.cs" />
+    <Compile Include="Classes\StringHelper.cs" />
     <Compile Include="Components\LevelComponent.cs" />
     <Compile Include="Components\LoadingScreenComponent.cs" />
     <Compile Include="Components\MenuComponent.cs" />

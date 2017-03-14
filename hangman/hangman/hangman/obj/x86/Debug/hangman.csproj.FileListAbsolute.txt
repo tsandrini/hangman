@@ -14,14 +14,13 @@ C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\obj\x86\Debug\hangman.c
 C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\obj\x86\Debug\hangman.exe
 C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\obj\x86\Debug\hangman.pdb
-C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\Fonts\gputeks.xnb
 C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\SFX\death.xnb
 C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\SFX\menu_confirm.xnb
 C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\SFX\menu_select.xnb
-C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\SFX\paddle_hit.xnb
 C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\Fonts\courierNew.xnb
 C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\Strings\strings.xnb
 C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\Fonts\menuFont.xnb
-C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\Graphics\Backgrounds\town_bg.xnb
-C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\Graphics\Backgrounds\panorama.xnb
 C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\Fonts\characterFont.xnb
+C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\Graphics\Backgrounds\image_part_001.xnb
+C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\Graphics\Backgrounds\image_part_002.xnb
+C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\Fonts\guessingWordFont.xnb

@@ -46,10 +46,10 @@ namespace hangman
 
         protected override void LoadContent()
         {
-            this.AddBackground(new ScrollingBackground(this.game.Content.Load<Texture2D>(@"Graphics\Backgrounds\panorama"),
+            this.AddBackground(new ScrollingBackground(this.game.Content.Load<Texture2D>(@"Graphics\Backgrounds\image_part_001"),
                 new Rectangle(0, 0, this.game.getViewportWidth(), this.game.getViewportHeight())));
 
-            this.AddBackground(new ScrollingBackground(this.game.Content.Load<Texture2D>(@"Graphics\Backgrounds\panorama"),
+            this.AddBackground(new ScrollingBackground(this.game.Content.Load<Texture2D>(@"Graphics\Backgrounds\image_part_002"),
                 new Rectangle(this.game.getViewportWidth(), 0, this.game.getViewportWidth(), this.game.getViewportHeight())));
 
             base.LoadContent();
