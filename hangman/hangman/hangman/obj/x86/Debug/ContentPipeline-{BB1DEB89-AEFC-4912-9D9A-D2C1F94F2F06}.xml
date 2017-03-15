@@ -2,15 +2,6 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>SFX\death.wav</Source>
-      <Name>SFX\death</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\SFX\death.xnb</Output>
-      <Time>2017-03-12T15:52:39.4680379+01:00</Time>
-    </Item>
-    <Item>
       <Source>SFX\menu_confirm.wav</Source>
       <Name>SFX\menu_confirm</Name>
       <Importer>WavImporter</Importer>
@@ -29,6 +20,24 @@
       <Time>2017-03-12T15:52:39.4836603+01:00</Time>
     </Item>
     <Item>
+      <Source>SFX\win.wav</Source>
+      <Name>SFX\win</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\SFX\win.xnb</Output>
+      <Time>2017-03-15T17:21:26.2163562+01:00</Time>
+    </Item>
+    <Item>
+      <Source>SFX\game_over.wav</Source>
+      <Name>SFX\game_over</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\SFX\game_over.xnb</Output>
+      <Time>2017-03-15T17:26:43.9423358+01:00</Time>
+    </Item>
+    <Item>
       <Source>Fonts\courierNew.spritefont</Source>
       <Name>Fonts\courierNew</Name>
       <Importer>FontDescriptionImporter</Importer>
@@ -36,15 +45,6 @@
       <Options>None</Options>
       <Output>C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\Fonts\courierNew.xnb</Output>
       <Time>2017-03-12T16:15:14.1117924+01:00</Time>
-    </Item>
-    <Item>
-      <Source>Strings\strings.xml</Source>
-      <Name>Strings\strings</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\Strings\strings.xnb</Output>
-      <Time>2017-03-13T08:19:05.3953068+01:00</Time>
     </Item>
     <Item>
       <Source>Fonts\menuFont.spritefont</Source>
@@ -65,6 +65,15 @@
       <Time>2017-03-14T15:41:40.2978626+01:00</Time>
     </Item>
     <Item>
+      <Source>Fonts\guessingWordFont.spritefont</Source>
+      <Name>Fonts\guessingWordFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\Fonts\guessingWordFont.xnb</Output>
+      <Time>2017-03-14T20:00:01.2968206+01:00</Time>
+    </Item>
+    <Item>
       <Source>Graphics\Backgrounds\image_part_001.png</Source>
       <Name>Graphics\Backgrounds\image_part_001</Name>
       <Importer>TextureImporter</Importer>
@@ -83,13 +92,67 @@
       <Time>2017-03-14T09:28:18.8523315+01:00</Time>
     </Item>
     <Item>
-      <Source>Fonts\guessingWordFont.spritefont</Source>
-      <Name>Fonts\guessingWordFont</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
+      <Source>Graphics\Hangman\part_002.png</Source>
+      <Name>Graphics\Hangman\part_002</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\Fonts\guessingWordFont.xnb</Output>
-      <Time>2017-03-14T20:00:01.2968206+01:00</Time>
+      <Output>C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\Graphics\Hangman\part_002.xnb</Output>
+      <Time>2017-03-15T10:26:17.6283118+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Graphics\Hangman\part_003.png</Source>
+      <Name>Graphics\Hangman\part_003</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\Graphics\Hangman\part_003.xnb</Output>
+      <Time>2017-03-15T10:26:17.6283118+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Graphics\Hangman\part_004.png</Source>
+      <Name>Graphics\Hangman\part_004</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\Graphics\Hangman\part_004.xnb</Output>
+      <Time>2017-03-15T10:26:17.6283118+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Graphics\Hangman\part_005.png</Source>
+      <Name>Graphics\Hangman\part_005</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\Graphics\Hangman\part_005.xnb</Output>
+      <Time>2017-03-15T10:26:17.6439098+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Graphics\Hangman\part_006.png</Source>
+      <Name>Graphics\Hangman\part_006</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\Graphics\Hangman\part_006.xnb</Output>
+      <Time>2017-03-15T10:26:17.6439098+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Graphics\Hangman\part_007.png</Source>
+      <Name>Graphics\Hangman\part_007</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\Graphics\Hangman\part_007.xnb</Output>
+      <Time>2017-03-15T10:26:17.6439098+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Graphics\Hangman\part_001.png</Source>
+      <Name>Graphics\Hangman\part_001</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tomáš\Desktop\hangman\hangman\hangman\hangman\bin\x86\Debug\Content\Graphics\Hangman\part_001.xnb</Output>
+      <Time>2017-03-15T16:55:59.9340146+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

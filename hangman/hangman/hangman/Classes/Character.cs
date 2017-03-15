@@ -13,6 +13,7 @@ namespace hangman
         public Rectangle rectangle;
         public float scale;
         public Color color;
+        public bool enabled;
 
         public Character(Rectangle rectangle, char character, Color color)
         {
@@ -20,6 +21,7 @@ namespace hangman
             this.rectangle = rectangle;
             this.scale = 0.6f;
             this.color = color;
+            this.enabled = true;
         }
 
         public Character(Rectangle rectangle, char character, float scale, Color color)
@@ -32,10 +34,13 @@ namespace hangman
 
         public void Draw(CoolFont spriteBatch, SpriteFont spriteFont)
         {
-            spriteBatch.MuchCoolerFont(spriteFont,
-                this.character.ToString(),
-                new Vector2(this.rectangle.X + this.rectangle.Width * 0.35f, this.rectangle.Y + this.rectangle.Height * 0.3f),
-                color, 0.6f);
+            if (this.enabled)
+            {
+                spriteBatch.MuchCoolerFont(spriteFont,
+                    this.character.ToString(),
+                    new Vector2(this.rectangle.X + this.rectangle.Width * 0.35f, this.rectangle.Y + this.rectangle.Height * 0.3f),
+                    color, 0.6f);
+            }
         }
 
     }

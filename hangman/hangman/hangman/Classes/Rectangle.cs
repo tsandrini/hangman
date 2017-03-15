@@ -29,5 +29,25 @@ namespace hangman
             DrawRectangle(spriteBatch, rectangle, color, lineWidth);
             DrawRectangle(spriteBatch, new Rectangle(rectangle.X + 2, rectangle.Y + 2, rectangle.Width, rectangle.Height), Color.Black, 1);
         }
+
+        public static void DrawLine(SpriteBatch spriteBatch, Texture2D texture, Vector2 start, Vector2 end, Color color, int width = 1)
+        {
+            Vector2 edge = end - start;
+
+            float angle = (float)Math.Atan2(edge.Y, edge.X);
+
+            spriteBatch.Draw(texture,
+                new Rectangle(
+                    (int)start.X,
+                    (int)start.Y,
+                    (int)edge.Length(),
+                    width),
+                null,
+                color,
+                angle,   
+                new Vector2(0, 0), 
+                SpriteEffects.None,
+                0);
+        }
     }
 }

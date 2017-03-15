@@ -16,7 +16,6 @@ namespace hangman
     public class LevelComponent : Microsoft.Xna.Framework.DrawableGameComponent
     {
         private static string avaibleCharacters = "a·bcËdÔeÈÏfghiÌjklmnÚoÛpqr¯sötùu˙˘vwxy˝zû";
-        private static string word = "test";
 
         private Game game;
         private Rectangle inputRectangle, hangmanRectangle;
@@ -26,7 +25,8 @@ namespace hangman
         private Color selectedCharacterColor;
         private Color unselectedCharacterColor;
         private Vector2 relativeRectangleSize, guessWordPos;
-        private string guessWord;
+        private Hangman hangman;
+        private SoundEffect winningSound, lossSound;
 
         public LevelComponent(Game game)
             : base(game)
@@ -35,16 +35,20 @@ namespace hangman
             this.characters = new List<Character>();
             this.selectedCharacterColor = Color.Magenta;
             this.unselectedCharacterColor = Color.Blue;
-            this.guessWord = "";
+        }
+
+        public void Reset()
+        {
+            this.hangman.Reset();
+
+            foreach (Character character in this.characters)
+            {
+                character.enabled = true;
+            }
         }
 
         public override void Initialize()
         {
-            for (int i = 0; i < word.Length; i++)
-            {
-                this.guessWord += "_";
-            }
-
             this.inputRectangle = new Rectangle(
                 (int)(this.game.getViewportWidth() * 0.15f),
                 (int)(this.game.getViewportHeight() * 0.65f),
@@ -58,6 +62,9 @@ namespace hangman
                 (int)((this.inputRectangle.Width * 0.5f) * 0.7f),
                 (int)((this.inputRectangle.Y) * 0.55f)
             );
+
+            this.hangman = new Hangman(this.hangmanRectangle, 7, this.game.Content.RootDirectory + @"\Strings\words.txt");
+            this.hangman.InitWord();
 
             this.guessWordPos = new Vector2(
                 (this.game.getViewportWidth() - this.hangmanRectangle.X + this.hangmanRectangle.Width) * 0.6f,
@@ -103,24 +110,65 @@ namespace hangman
 
         public void CharacterClicked(Character character)
         {
-            char clickedCharacter = character.character;
-
-            for (int i = word.IndexOf(clickedCharacter); i > -1; i = word.IndexOf(clickedCharacter, i + 1))
+            if (character.enabled)
             {
-                guessWord = StringHelper.ReplaceAt(guessWord, i, clickedCharacter);
-            }
+                char clickedCharacter = character.character;
 
+                if (this.hangman.getSecretWord().ToLower().Contains(clickedCharacter))
+                {
+                    for (int i = this.hangman.getSecretWord().ToLower().IndexOf(clickedCharacter); i > -1; i = this.hangman.getSecretWord().ToLower().IndexOf(clickedCharacter, i + 1))
+                    {
+                        this.hangman.setGuessWord(StringHelper.ReplaceAt(this.hangman.getGuessWord(), i, clickedCharacter));
+                    }
+                }
+                else
+                {
+                    this.hangman.DecrementLife();
+                }
+
+                character.enabled = false;
+            }
         }
 
         protected override void LoadContent()
         {
+            this.winningSound = this.game.Content.Load<SoundEffect>(@"SFX\win");
+            this.lossSound = this.game.Content.Load<SoundEffect>(@"SFX\game_over");
             this.characterFont = this.game.Content.Load<SpriteFont>(@"Fonts\characterFont");
+
+            List<Texture2D> sprites = new List<Texture2D>();
+
+            sprites.Add(this.game.Content.Load<Texture2D>(@"Graphics\Hangman\part_007"));
+            sprites.Add(this.game.Content.Load<Texture2D>(@"Graphics\Hangman\part_006"));
+            sprites.Add(this.game.Content.Load<Texture2D>(@"Graphics\Hangman\part_005"));
+            sprites.Add(this.game.Content.Load<Texture2D>(@"Graphics\Hangman\part_004"));
+            sprites.Add(this.game.Content.Load<Texture2D>(@"Graphics\Hangman\part_003"));
+            sprites.Add(this.game.Content.Load<Texture2D>(@"Graphics\Hangman\part_002"));
+            sprites.Add(this.game.Content.Load<Texture2D>(@"Graphics\Hangman\part_001"));
+
+            this.hangman.setSprites(sprites);
 
             base.LoadContent();
         }
 
         public override void Update(GameTime gameTime)
         {
+            // LOSS
+            if (this.hangman.getLives() == 1)
+            {
+                this.lossSound.Play();
+                this.Reset();
+                this.game.SwitchWindows(this.game.menuWindow);
+            }
+
+            // WIN
+            if (this.hangman.getGuessWord() == this.hangman.getSecretWord())
+            {
+                this.winningSound.Play();
+                this.Reset();
+                this.game.SwitchWindows(this.game.menuWindow);
+            }
+
             if (game.NewKeyboardKey(Keys.Escape))
             {
                 this.game.SwitchWindows(this.game.menuWindow);
@@ -176,7 +224,10 @@ namespace hangman
             Texture2D texture = new Texture2D(this.game.GraphicsDevice, 1, 1, false, SurfaceFormat.Color);
             texture.SetData<Color>(new Color[] { Color.White });
 
-            this.game.spriteBatch.Draw(texture, this.hangmanRectangle, Color.GhostWhite);
+            //this.game.spriteBatch.Draw(texture, this.hangmanRectangle, Color.GhostWhite);
+
+            this.hangman.Draw(this.game.spriteBatch);
+
             RectangleSprite.DrawMuchCoolerRectangle(this.game.spriteBatch, this.hangmanRectangle, Color.BlueViolet, 5);
 
             foreach (Character character in this.characters)
@@ -186,7 +237,7 @@ namespace hangman
                 character.Draw(this.game.spriteBatch, this.game.characterFont);
             }
 
-            this.game.spriteBatch.MuchCoolerFont(this.game.guessingWordFont, this.guessWord, guessWordPos, Color.Blue, 0.6f);
+            this.game.spriteBatch.MuchCoolerFont(this.game.guessingWordFont, this.hangman.getGuessWord(), guessWordPos, Color.Blue, 0.6f);
 
             this.game.spriteBatch.End();
 

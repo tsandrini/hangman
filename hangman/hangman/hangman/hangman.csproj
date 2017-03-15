@@ -16,7 +16,7 @@
     <XnaProfile>Reach</XnaProfile>
     <XnaCrossPlatformGroupID>643302de-86d9-48ad-9d82-7d1ca23459cc</XnaCrossPlatformGroupID>
     <XnaOutputType>Game</XnaOutputType>
-    <ApplicationIcon>Game.ico</ApplicationIcon>
+    <ApplicationIcon>Hangman.ico</ApplicationIcon>
     <Thumbnail>GameThumbnail.png</Thumbnail>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -76,9 +76,11 @@
     <Compile Include="Classes\Character.cs" />
     <Compile Include="Classes\CoolFont.cs" />
     <Compile Include="Classes\GameWindow.cs" />
+    <Compile Include="Classes\Hangman.cs" />
     <Compile Include="Classes\MenuItem.cs" />
     <Compile Include="Classes\Rectangle.cs" />
     <Compile Include="Classes\StringHelper.cs" />
+    <Compile Include="Classes\WordGenerator.cs" />
     <Compile Include="Components\LevelComponent.cs" />
     <Compile Include="Components\LoadingScreenComponent.cs" />
     <Compile Include="Components\MenuComponent.cs" />
@@ -93,6 +95,7 @@
     <Content Include="GameThumbnail.png">
       <XnaPlatformSpecific>true</XnaPlatformSpecific>
     </Content>
+    <Content Include="Hangman.ico" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\hangmanContent\hangmanContent.contentproj">

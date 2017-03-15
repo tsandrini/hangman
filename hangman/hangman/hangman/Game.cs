@@ -31,9 +31,9 @@ namespace hangman
         {
             // MENU ITEMS INIT
             MenuItemsComponent menuItems = new MenuItemsComponent(this, new Vector2(this.getViewportWidth() * 0.45f, this.getViewportHeight() * 0.75f), Color.Blue, Color.Yellow, 75);
-            menuItems.AddItem("Nová hra", "new-game");
-            menuItems.AddItem("Výsledky", "high-score");
-            menuItems.AddItem("Nastavení", "settings");
+            menuItems.AddItem("Hrát", "new-game");
+            //menuItems.AddItem("Výsledky", "high-score");
+            //menuItems.AddItem("Nastavení", "settings");
             menuItems.AddItem("Odejít", "exit");
 
             // COMPONENTS INIT
